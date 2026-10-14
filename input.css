@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Build command:
+  npx tailwindcss -i ./input.css -o ./styles.css --minify
+*/

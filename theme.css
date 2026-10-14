@@ -1,0 +1,14 @@
+/*
+  THEME — change the palette here and nothing else.
+  Values are "R G B" (no commas) so Tailwind opacity utilities like bg-accent/80 keep working.
+  Keep this file linked in index.html even after you compile Tailwind.
+*/
+:root {
+  --color-primary: 98 196 118;    /* fresh green   #62C476 */
+  --color-secondary: 150 214 245; /* light blue    #96D6F5 */
+  --color-accent: 255 232 138;    /* light yellow  #FFE88A */
+
+  /* neutrals */
+  --color-ink: 31 59 52;          /* text          #1F3B34 */
+  --color-paper: 251 253 250;     /* page bg       #FBFDFA */
+}
