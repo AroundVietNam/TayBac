@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Around Vietnam</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Color tokens (keep this after compiling too) -->
+  <link rel="stylesheet" href="theme.css" />
+
+  <!-- PREVIEW MODE: delete these two lines after compiling Tailwind -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="tailwind.config.js"></script>
+  <!-- BUILD MODE: then add this line instead -->
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+</head>
+
+<body class="bg-paper font-body text-ink antialiased">
+
+  <!-- Header: just the name and a line -->
+  <header class="px-5 py-5 text-center">
+    <p class="font-display text-2xl font-semibold tracking-wide">Around Vietnam</p>
+  </header>
+  <hr class="border-t-2 border-primary" />
+
+  <main>
+    <!-- Hero: centered text over a cover-fit looping video -->
+    <section class="relative flex h-[85svh] min-h-[420px] items-center justify-center overflow-hidden bg-gradient-to-br from-secondary to-primary">
+      <video
+        id="hero-video"
+        class="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        autoplay muted loop playsinline
+        disablepictureinpicture
+        aria-hidden="true"
+      ></video>
+      <div class="absolute inset-0 bg-ink/45"></div>
+      <div class="relative z-10 px-6 text-center text-white">
+        <h1 class="font-display text-4xl font-semibold leading-tight md:text-6xl">One long road, north to south</h1>
+        <p class="mt-4 text-lg md:text-xl">Follow along as we go.</p>
+      </div>
+    </section>
+
+    <!-- Parts: image 70% / text 30%, then reversed. Hover (or tap) the photo to read more. -->
+    <section class="mx-auto max-w-6xl space-y-16 px-5 py-16 md:space-y-24 md:py-24">
+
+      <!-- Part 1 -->
+      <article class="flex flex-col items-center gap-10 md:flex-row md:gap-14">
+        <a href="#" data-reveal class="group relative block w-full -rotate-2 bg-white p-4 pb-14 shadow-[0_22px_40px_-14px_rgba(31,59,52,0.45)] ring-1 ring-ink/5 transition-transform duration-500 hover:rotate-0 focus-visible:rotate-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:basis-[70%] md:p-6 md:pb-20">
+          <span aria-hidden="true" class="absolute -top-3 left-1/2 h-7 w-28 -translate-x-1/2 rotate-3 bg-accent/80 shadow-sm"></span>
+          <div class="relative aspect-[4/3] overflow-hidden bg-secondary/40">
+            <img src="https://picsum.photos/seed/vietnam1/1200/900" alt="Part 1 photo" loading="lazy" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-center bg-secondary/85 p-8 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-[.is-active]:opacity-100">
+              <p class="max-w-md text-lg md:text-xl">Write about this stop here: what you ate, who you met, what surprised you.</p>
+            </div>
+          </div>
+          <p class="absolute inset-x-0 bottom-0 flex h-14 items-center justify-center font-display text-lg md:h-20">Place name</p>
+        </a>
+        <div class="md:basis-[30%]">
+          <h2 class="font-display text-4xl font-semibold">Part 1</h2>
+          <div class="mt-3 h-1.5 w-16 rounded-full bg-primary"></div>
+          <p class="mt-4 text-lg text-ink/80"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad soluta voluptatem consectetur impedit nihil ducimus veritatis doloribus ipsa deserunt, ipsam dolorum sed mollitia ratione. Veritatis repellendus suscipit quae quia nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis delectus labore, architecto quibusdam quas illo ea consectetur non vel magni totam explicabo ipsa asperiores quisquam natus molestias omnis eum.
+          </p>
+        </div>
+      </article>
+
+      <!-- Part 2 (reversed) -->
+      <article class="flex flex-col items-center gap-10 md:flex-row-reverse md:gap-14">
+        <a href="#" data-reveal class="group relative block w-full rotate-2 bg-white p-4 pb-14 shadow-[0_22px_40px_-14px_rgba(31,59,52,0.45)] ring-1 ring-ink/5 transition-transform duration-500 hover:rotate-0 focus-visible:rotate-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:basis-[70%] md:p-6 md:pb-20">
+          <span aria-hidden="true" class="absolute -top-3 left-1/2 h-7 w-28 -translate-x-1/2 -rotate-3 bg-accent/80 shadow-sm"></span>
+          <div class="relative aspect-[4/3] overflow-hidden bg-secondary/40">
+            <img src="https://picsum.photos/seed/vietnam2/1200/900" alt="Part 2 photo" loading="lazy" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-center bg-secondary/85 p-8 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-[.is-active]:opacity-100">
+              <p class="max-w-md text-lg md:text-xl">Write about this stop here: what you ate, who you met, what surprised you.</p>
+            </div>
+          </div>
+          <p class="absolute inset-x-0 bottom-0 flex h-14 items-center justify-center font-display text-lg md:h-20">Place name</p>
+        </a>
+        <div class="md:basis-[30%]">
+          <h2 class="font-display text-4xl font-semibold">Part 2</h2>
+          <div class="mt-3 h-1.5 w-16 rounded-full bg-primary"></div>
+          <p class="mt-4 text-lg text-ink/80">A short line about this leg of the journey.</p>
+        </div>
+      </article>
+
+      <!-- Part 3 -->
+      <article class="flex flex-col items-center gap-10 md:flex-row md:gap-14">
+        <a href="#" data-reveal class="group relative block w-full -rotate-1 bg-white p-4 pb-14 shadow-[0_22px_40px_-14px_rgba(31,59,52,0.45)] ring-1 ring-ink/5 transition-transform duration-500 hover:rotate-0 focus-visible:rotate-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:basis-[70%] md:p-6 md:pb-20">
+          <span aria-hidden="true" class="absolute -top-3 left-1/2 h-7 w-28 -translate-x-1/2 rotate-2 bg-accent/80 shadow-sm"></span>
+          <div class="relative aspect-[4/3] overflow-hidden bg-secondary/40">
+            <img src="https://picsum.photos/seed/vietnam3/1200/900" alt="Part 3 photo" loading="lazy" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-center bg-secondary/85 p-8 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-[.is-active]:opacity-100">
+              <p class="max-w-md text-lg md:text-xl">Write about this stop here: what you ate, who you met, what surprised you.</p>
+            </div>
+          </div>
+          <p class="absolute inset-x-0 bottom-0 flex h-14 items-center justify-center font-display text-lg md:h-20">Place name</p>
+        </a>
+        <div class="md:basis-[30%]">
+          <h2 class="font-display text-4xl font-semibold">Part 3</h2>
+          <div class="mt-3 h-1.5 w-16 rounded-full bg-primary"></div>
+          <p class="mt-4 text-lg text-ink/80">A short line about this leg of the journey.</p>
+        </div>
+      </article>
+
+      <!-- Part 4 (reversed) -->
+      <article class="flex flex-col items-center gap-10 md:flex-row-reverse md:gap-14">
+        <a href="#" data-reveal class="group relative block w-full rotate-1 bg-white p-4 pb-14 shadow-[0_22px_40px_-14px_rgba(31,59,52,0.45)] ring-1 ring-ink/5 transition-transform duration-500 hover:rotate-0 focus-visible:rotate-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:basis-[70%] md:p-6 md:pb-20">
+          <span aria-hidden="true" class="absolute -top-3 left-1/2 h-7 w-28 -translate-x-1/2 -rotate-2 bg-accent/80 shadow-sm"></span>
+          <div class="relative aspect-[4/3] overflow-hidden bg-secondary/40">
+            <img src="https://picsum.photos/seed/vietnam4/1200/900" alt="Part 4 photo" loading="lazy" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-center bg-secondary/85 p-8 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-[.is-active]:opacity-100">
+              <p class="max-w-md text-lg md:text-xl">Write about this stop here: what you ate, who you met, what surprised you.</p>
+            </div>
+          </div>
+          <p class="absolute inset-x-0 bottom-0 flex h-14 items-center justify-center font-display text-lg md:h-20">Place name</p>
+        </a>
+        <div class="md:basis-[30%]">
+          <h2 class="font-display text-4xl font-semibold">Part 4</h2>
+          <div class="mt-3 h-1.5 w-16 rounded-full bg-primary"></div>
+          <p class="mt-4 text-lg text-ink/80">A short line about this leg of the journey.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Detail: c1 is 2x2, c2/c3 stacked, c4 c5 c6 along the bottom -->
+    <section class="bg-secondary/20 px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="text-center font-display text-4xl font-semibold">Detail</h2>
+        <div class="mx-auto mt-3 h-1.5 w-16 rounded-full bg-primary"></div>
+
+        <div class="mt-12 grid auto-rows-[200px] grid-cols-2 gap-5 md:auto-rows-[250px] md:grid-cols-3 md:gap-7">
+          <!-- c1 -->
+          <article class="col-span-2 flex -rotate-1 flex-col bg-white p-3 shadow-[0_16px_30px_-12px_rgba(31,59,52,0.4)] ring-1 ring-ink/5 md:row-span-2">
+            <div class="relative min-h-0 flex-1 overflow-hidden bg-secondary/40">
+              <img src="https://picsum.photos/seed/detail1/1000/1000" alt="Street food" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <h3 class="pb-1 pt-3 text-center font-display text-lg font-semibold">Street food</h3>
+          </article>
+          <!-- c2 -->
+          <article class="flex rotate-1 flex-col bg-white p-3 shadow-[0_16px_30px_-12px_rgba(31,59,52,0.4)] ring-1 ring-ink/5">
+            <div class="relative min-h-0 flex-1 overflow-hidden bg-secondary/40">
+              <img src="https://picsum.photos/seed/detail2/800/800" alt="Night market" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <h3 class="pb-1 pt-3 text-center font-display text-lg font-semibold">Night market</h3>
+          </article>
+          <!-- c3 -->
+          <article class="flex -rotate-1 flex-col bg-white p-3 shadow-[0_16px_30px_-12px_rgba(31,59,52,0.4)] ring-1 ring-ink/5">
+            <div class="relative min-h-0 flex-1 overflow-hidden bg-secondary/40">
+              <img src="https://picsum.photos/seed/detail3/800/800" alt="Motorbike roads" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <h3 class="pb-1 pt-3 text-center font-display text-lg font-semibold">Motorbike roads</h3>
+          </article>
+          <!-- c4 -->
+          <article class="flex rotate-1 flex-col bg-white p-3 shadow-[0_16px_30px_-12px_rgba(31,59,52,0.4)] ring-1 ring-ink/5">
+            <div class="relative min-h-0 flex-1 overflow-hidden bg-secondary/40">
+              <img src="https://picsum.photos/seed/detail4/800/800" alt="Coffee stop" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <h3 class="pb-1 pt-3 text-center font-display text-lg font-semibold">Coffee stop</h3>
+          </article>
+          <!-- c5 -->
+          <article class="flex -rotate-1 flex-col bg-white p-3 shadow-[0_16px_30px_-12px_rgba(31,59,52,0.4)] ring-1 ring-ink/5">
+            <div class="relative min-h-0 flex-1 overflow-hidden bg-secondary/40">
+              <img src="https://picsum.photos/seed/detail5/800/800" alt="Old town" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <h3 class="pb-1 pt-3 text-center font-display text-lg font-semibold">Old town</h3>
+          </article>
+          <!-- c6 -->
+          <article class="flex rotate-1 flex-col bg-white p-3 shadow-[0_16px_30px_-12px_rgba(31,59,52,0.4)] ring-1 ring-ink/5">
+            <div class="relative min-h-0 flex-1 overflow-hidden bg-secondary/40">
+              <img src="https://picsum.photos/seed/detail6/800/800" alt="Beach" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <h3 class="pb-1 pt-3 text-center font-display text-lg font-semibold">Beach</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary py-14 text-center">
+    <p class="font-display text-3xl font-semibold">Let's go</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
