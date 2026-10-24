@@ -17,11 +17,10 @@
   .screen { height: 100vh; height: 100svh; }
   .pol { transform: rotate(var(--r)); transition: transform .3s ease; }
   .pol:hover { transform: rotate(0deg) scale(1.1); z-index: 5; }
-  #mqbox { transition: opacity .25s ease; }
   @media (prefers-reduced-motion: reduce) { .pol { transition: none; } }
 </style>
 </head>
-<body class="font-body antialiased scrollbar-none overflow-y-auto">
+<body class="font-body antialiased">
 
 <button id="lang" class="fixed top-3 right-3 z-50 rounded-full bg-black/55 px-3 py-1.5 text-sm text-white backdrop-blur" aria-label="Change language"></button>
 
@@ -31,25 +30,25 @@
   <div class="absolute inset-0 bg-black/30"></div>
   <nav class="absolute inset-x-0 top-0 z-30 flex items-center gap-3 px-6 py-5">
     <!-- LOGO: put your <img src="logo.svg" class="h-8"> inside this span -->
-    <img src="media/temp_logo.jpeg" class="h-8">
+    <img src="media/logo.webp" class="h-8">
     <span id="logo" class="inline-flex items-center"></span>
-    <span class="font-head text-lg font-bold" data-i18n="ui.name"></span>
+    <span class="font-head text-2xl font-bold md:text-3xl" data-i18n="ui.name"></span>
   </nav>
   <div id="loader" class="absolute inset-0 z-20 grid place-items-center bg-[#16231b]">
     <h1 class="px-4 text-center font-head text-5xl font-extrabold md:text-8xl" data-i18n="ui.name"></h1>
   </div>
   <div class="absolute inset-x-0 bottom-0 z-10 grid grid-cols-3 border-t border-white/30 bg-black/25 backdrop-blur-sm">
-    <div class="px-4 py-5 md:px-8"><p class="text-sm" data-i18n="hero.location.label"></p><p class="mt-1 text-white/70" data-i18n="hero.location.value"></p></div>
-    <div class="border-l border-white/30 px-4 py-5 md:px-8"><p class="text-sm" data-i18n="hero.duration.label"></p><p class="mt-1 text-white/70" data-i18n="hero.duration.value"></p></div>
-    <div class="border-l border-white/30 px-4 py-5 md:px-8"><p class="text-sm" data-i18n="hero.budget.label"></p><p class="mt-1 text-white/70" data-i18n="hero.budget.value"></p></div>
+    <div class="px-4 py-6 md:px-8"><p class="text-base font-semibold md:text-xl" data-i18n="hero.location.label"></p><p class="mt-1 text-lg text-white/80 md:text-2xl" data-i18n="hero.location.value"></p></div>
+    <div class="border-l border-white/30 px-4 py-6 md:px-8"><p class="text-base font-semibold md:text-xl" data-i18n="hero.duration.label"></p><p class="mt-1 text-lg text-white/80 md:text-2xl" data-i18n="hero.duration.value"></p></div>
+    <div class="border-l border-white/30 px-4 py-6 md:px-8"><p class="text-base font-semibold md:text-xl" data-i18n="hero.budget.label"></p><p class="mt-1 text-lg text-white/80 md:text-2xl" data-i18n="hero.budget.value"></p></div>
   </div>
 </header>
 
 <!-- DAYS (pinned, driven by GSAP ScrollTrigger) -->
 <main id="days" class="screen relative overflow-hidden">
   <div id="panels"></div>
-  <div id="timeline" class="absolute inset-x-0 bottom-[3vh] mx-auto w-[min(520px,76vw)]">
-    <div id="labels" class="relative h-5 text-xs"></div>
+  <div id="timeline" class="absolute inset-x-0 bottom-[3vh] mx-auto hidden w-[min(560px,60vw)] md:block">
+    <div id="labels" class="relative h-7 text-base"></div>
     <div class="relative mt-1 h-px bg-black/30">
       <i id="dot" class="absolute -top-[5px] left-0 h-[11px] w-[11px] rounded-full"></i>
     </div>
@@ -58,16 +57,12 @@
 
 <!-- MARQUEE -->
 <section id="gallery" class="overflow-hidden py-24">
-  <h2 class="mb-12 px-6 font-head text-3xl font-extrabold md:px-[10vw] md:text-5xl" data-i18n="marquee.title"></h2>
-  <div id="track" class="flex w-max gap-6 pr-6 py-6"></div>
+  <h2 class="mb-12 px-6 font-head text-4xl font-extrabold md:px-[10vw] md:text-6xl" data-i18n="marquee.title"></h2>
+  <div id="track" class="flex w-max gap-6 pr-6 py-14"></div>
 </section>
-<div id="mqbox" class="pointer-events-none fixed z-40 w-[260px] rounded-md bg-white p-4 opacity-0 shadow-2xl">
-  <h3 id="mqt" class="font-head text-lg font-bold"></h3>
-  <p id="mqp" class="mt-1 text-sm"></p>
-</div>
 
 <!-- FOOTER -->
-<footer class="py-8 text-center text-sm" data-i18n="ui.footer"></footer>
+<footer class="py-10 text-center text-xl md:text-2xl" data-i18n="ui.footer"></footer>
 
 <script src="main.js"></script>
 </body>

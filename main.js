@@ -31,14 +31,14 @@ function init() {
   /* ---------- build day panels ---------- */
   document.getElementById('panels').innerHTML = days.map((d, i) => `
     <article class="panel absolute inset-0" style="--accent:${d.color}">
-      <div class="absolute left-[4vw] top-[1.5vh] md:left-[10vw]">
-        <p class="text-sm font-semibold" style="color:${d.color}"><span data-i18n="ui.day"></span> ${i + 1}</p>
-        <h2 class="font-head text-3xl font-extrabold leading-tight md:text-5xl" data-i18n="days.${i}.name"></h2>
-      </div>
-      <div class="absolute left-1/2 top-[11vh] h-[72vh] w-[92vw] -translate-x-1/2 md:h-[75vh] md:w-[80vw]">
-        <div class="photo relative h-full w-full overflow-hidden rounded-xl" style="box-shadow:0 30px 70px -18px ${d.color}">
+      <div class="absolute left-1/2 top-[12vh] h-[74vh] w-[92vw] -translate-x-1/2 md:top-[15vh] md:h-[69vh] md:w-[80vw]">
+        <div class="pointer-events-none absolute inset-x-0 bottom-full z-20 mb-3 flex items-end justify-center">
+          <h2 class="font-head text-[1.7rem] font-extrabold leading-none md:text-[clamp(2.75rem,5vw,4.5rem)]" data-i18n="days.${i}.name"></h2>
+          <p class="absolute bottom-0 left-0 font-head text-[1.35rem] font-bold leading-none md:text-[clamp(2.2rem,4vw,3.6rem)]" style="color:${d.color}"><span data-i18n="ui.day"></span> ${i + 1}</p>
+        </div>
+        <div class="photo relative h-full w-full overflow-hidden rounded-xl" style="box-shadow:0 20px 100px 4px ${d.color}">
           <img src="${d.media}" alt="" class="h-full w-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.35) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 90%)"></div>
         </div>
         <div class="pols pointer-events-none absolute inset-x-0 -bottom-[7vh] flex justify-around px-2 md:px-[6vw]">
           ${d.pols.map((p, j) => `
@@ -84,31 +84,37 @@ function init() {
   }
 
   /* ---------- marquee ---------- */
-  const track = document.getElementById('track'), M = S.marquee;
+  const track = document.getElementById('track'), M = S.marquee, BW = 260;
   track.innerHTML = [...M, ...M].map((src, i) =>
-    `<div class="mq w-[220px] shrink-0 cursor-pointer md:w-[280px]" data-k="${i % M.length}"><img src="${src}" alt="" class="aspect-[3/4] w-full rounded-lg object-cover shadow-lg"></div>`).join('');
+    `<div class="mq relative w-[220px] shrink-0 cursor-pointer md:w-[280px]" data-k="${i % M.length}">
+      <div class="mqb absolute inset-y-0 left-0 z-0 flex flex-col justify-center rounded-lg bg-white p-5 opacity-0 shadow-2xl" style="width:${BW}px;visibility:hidden">
+        <h3 class="font-head text-xl font-bold"></h3><p class="mt-2 text-sm"></p>
+      </div>
+      <img src="${src}" alt="" class="relative z-10 aspect-[3/4] w-full rounded-lg object-cover shadow-lg">
+    </div>`).join('');
   const cards = gsap.utils.toArray('.mq');
   gsap.set(cards, { transformPerspective: 900, rotationY: 28 }); /* flip the sign to look the other way */
   const run = gsap.to(track, { xPercent: -50, duration: 45, ease: 'none', repeat: -1 });
-  const box = document.getElementById('mqbox');
 
   cards.forEach((c) => {
+    const box = c.querySelector('.mqb'), w = () => c.offsetWidth;
     c.addEventListener('mouseenter', () => {
+      const k = c.dataset.k, r = c.getBoundingClientRect();
+      box.querySelector('h3').textContent = t(`marquee.items.${k}.title`);
+      box.querySelector('p').textContent = t(`marquee.items.${k}.text`);
+      const right = r.left + r.width / 2 + (w() * 1.25) / 2 + BW * 1.25 < innerWidth - 8;
+      box.style.left = right ? '0' : 'auto'; box.style.right = right ? 'auto' : '0';
+      box.style.paddingLeft = right ? '34px' : '20px'; box.style.paddingRight = right ? '20px' : '34px';
       gsap.to(run, { timeScale: 0, duration: 0.5 });
-      gsap.to(c, { rotationY: 0, scale: 1.25, zIndex: 10, duration: 0.4 });
-      const k = c.dataset.k;
-      document.getElementById('mqt').textContent = t(`marquee.items.${k}.title`);
-      document.getElementById('mqp').textContent = t(`marquee.items.${k}.text`);
-      const r = c.getBoundingClientRect(), gap = r.width * 0.12 + 14;
-      const right = r.right + gap + 260 < innerWidth;
-      box.style.left = (right ? r.right + gap : Math.max(8, r.left - gap - 260)) + 'px';
-      box.style.top = Math.max(8, r.top + r.height / 2 - 70) + 'px';
-      box.style.opacity = 1;
+      gsap.to(cards.filter((x) => x !== c), { opacity: 0.8, duration: 0.3, overwrite: 'auto' });
+      gsap.to(c, { rotationY: 0, scale: 1.25, zIndex: 10, opacity: 1, duration: 0.4, overwrite: 'auto' });
+      gsap.fromTo(box, { x: 0, autoAlpha: 0 }, { x: (right ? 1 : -1) * (w() - 12), autoAlpha: 1, duration: 0.5, ease: 'power3.out', overwrite: 'auto' });
     });
     c.addEventListener('mouseleave', () => {
       gsap.to(run, { timeScale: 1, duration: 0.6 });
-      gsap.to(c, { rotationY: 28, scale: 1, zIndex: 0, duration: 0.4 });
-      box.style.opacity = 0;
+      gsap.to(cards, { opacity: 1, duration: 0.3, overwrite: 'auto' });
+      gsap.to(c, { rotationY: 28, scale: 1, zIndex: 0, duration: 0.4, overwrite: 'auto' });
+      gsap.to(box, { x: 0, autoAlpha: 0, duration: 0.3, overwrite: 'auto' });
     });
   });
 }

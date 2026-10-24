@@ -10,7 +10,7 @@
     "marquee": ["media/Ta_Van.webp", "media/Fansipan.webp", "media/MuCangChai_Deo_O_Quy_Ho.webp", "media/La_Pan_Tan(1).webp", "media/Ta_Van.webp", "media/La_Pan_Tan(1).webp"]
   },
   "en": {
-    "ui": { "name": "Around Viet Nam", "day": "Day", "footer": "One road to the north" },
+    "ui": { "name": "Around Viet Nam", "day": "Day", "footer": "One road to the North" },
     "hero": {
       "location": { "label": "Location", "value": "Northern Viet Nam" },
       "duration": { "label": "Duration", "value": "4 days" },
