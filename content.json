@@ -56,7 +56,8 @@
       "name": "Around Viet Nam",
       "day": "Ngày",
       "footer": "Hãy đón nhận vẻ đẹp của Việt Nam và để vùng Tây Bắc chiếm trọn trái tim bạn.",
-      "destinations": "Điểm đến nổi bật"
+      "destinations": "Điểm đến nổi bật",
+      "loading": "Đang tải video..."
     },
     "hero": {
       "location": {
@@ -159,7 +160,8 @@
       "name": "Around Viet Nam",
       "day": "Day",
       "footer": "Embrace the beauty of Viet Nam and let the Northwest steal your heart.",
-      "destinations": "Featured destinations"
+      "destinations": "Featured destinations",
+      "loading": "Loading video..."
     },
     "hero": {
       "location": {

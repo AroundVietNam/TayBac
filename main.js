@@ -30,6 +30,7 @@ function init() {
   if (S.heroVideo) {
     v.src = S.heroVideo;
     v.addEventListener('loadeddata', () => gsap.to('#loader', { autoAlpha: 0, duration: 1 }), { once: true });
+    v.addEventListener('error', () => gsap.to('#loader', { autoAlpha: 0, duration: 1 }), { once: true });
   }
 
   /* ---------- build day panels ---------- */
