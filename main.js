@@ -12,6 +12,10 @@ function applyLang(l) {
   document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n) ?? ''; });
   const b = document.getElementById('lang');
   b.innerHTML = l === 'en' ? '<b>EN</b> | <span class="opacity-60">VI</span>' : '<span class="opacity-60">EN</span> | <b>VI</b>';
+  const plan = document.getElementById('plan');
+  const file = L.hero.planFile || DATA.shared.plan || '#';
+  plan.href = file;
+  plan.setAttribute('download', file.split('/').pop());
 }
 
 fetch('content.json').then((r) => r.json()).then((d) => { DATA = d; init(); })
@@ -27,8 +31,6 @@ function init() {
     v.src = S.heroVideo;
     v.addEventListener('loadeddata', () => gsap.to('#loader', { autoAlpha: 0, duration: 1 }), { once: true });
   }
-
-  const plan = document.getElementById('plan'); plan.href = S.plan || '#'; if (S.plan) plan.setAttribute('download', '');
 
   /* ---------- build day panels ---------- */
   document.getElementById('panels').innerHTML = days.map((d, i) => `

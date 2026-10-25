@@ -1,22 +1,23 @@
 {
   "shared": {
     "heroVideo": "media/intro_soundless.mp4",
+    "plan": "media/plan/lịch-trình-chi-tiết-DLTB.docx",
     "days": [
       {
         "media": "media/Ta_Van.webp",
         "color": "#E3B21B",
         "pols": [
           "media/Sapa_Clover_Hotel.webp",
-          "media/Sapa_Nhuom_Cham.jpg",
-          "media/Sapa_Sailing_Sapa.png"
+          "media/Sapa_Nhuom_Cham.webp",
+          "media/Sapa_Sailing_Sapa.webp"
         ]
       },
       {
         "media": "media/Fansipan.webp",
         "color": "#4F7FA8",
         "pols": [
-          "media/Sapa_Mega_View_Homestay.jpg",
-          "media/Sapa_Ho_Mat_Ngoc.jpg",
+          "media/Sapa_Mega_View_Homestay.webp",
+          "media/Sapa_Ho_Mat_Ngoc.webp",
           "media/Sapa_Quang_Truong_Sapa.webp"
         ]
       },
@@ -25,7 +26,7 @@
         "color": "#6E93BD",
         "pols": [
           "media/Nha_San_Quan_Than_Uyen.webp",
-          "media/Mu_Cang_Chai_Big_View_Homestay.jpg",
+          "media/Mu_Cang_Chai_Big_View_Homestay.webp",
           "media/Doi_Mong_Ngua.webp"
         ]
       },
@@ -33,9 +34,9 @@
         "media": "media/La_Pan_Tan(1).webp",
         "color": "#8FAE2E",
         "pols": [
-          "media/Doi_Mam_Xoi.jpg",
-          "media/Deo_Khau_Pha.jpg",
-          "media/Pho_Nui_Tu_Le.jpg"
+          "media/Doi_Mam_Xoi.webp",
+          "media/Deo_Khau_Pha.webp",
+          "media/Pho_Nui_Tu_Le.webp"
         ]
       }
     ],
@@ -46,8 +47,7 @@
       "media/La_Pan_Tan(1).webp",
       "media/Ta_Van.webp",
       "media/La_Pan_Tan(1).webp"
-    ],
-    "plan": "media/plan.pdf"
+    ]
   },
   "vi": {
     "ui": {
@@ -69,7 +69,8 @@
         "label": "Ngân sách",
         "value": "9 672 882 VNĐ"
       },
-      "plan": "Tải bảng kế hoạch"
+      "plan": "Tải bảng kế hoạch",
+      "planFile": "media/plan/lịch-trình-chi-tiết-DLTB.docx"
     },
     "days": [
       {
@@ -161,7 +162,8 @@
         "label": "Budget",
         "value": "$374.30"
       },
-      "plan": "Download plan"
+      "plan": "Download plan",
+      "planFile": "media/plan/lịch-trình-chi-tiết-DLTB.docx"
     },
     "days": [
       {
