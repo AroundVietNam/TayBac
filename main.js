@@ -111,7 +111,8 @@ function init() {
     </div>`).join('');
   gsap.set('.mqb', { yPercent: -50 });
   const cards = gsap.utils.toArray('.mq');
-  gsap.set(cards, { transformPerspective: 900, rotationY: 28 }); /* flip the sign to look the other way */
+  const flipRotationY = 28; /* flip the sign to look the other way */
+  gsap.set(cards, { transformPerspective: 900, rotationY: flipRotationY });
   const run = gsap.to(track, { xPercent: -50, duration: 45, ease: 'none', repeat: -1 });
   const DIM = 0.4; /* opacity of the other cards while one is open */
 
@@ -122,7 +123,7 @@ function init() {
     gsap.to(run, { timeScale: c ? 0 : 1, duration: c ? 0.5 : 0.6, overwrite: true });
     cards.forEach((x) => {
       const on = x === c, box = x.querySelector('.mqb'), ov = x.querySelector('.mqo');
-      gsap.to(x, { opacity: c ? (on ? 1 : DIM) : 1, rotationY: on ? 0 : 28, scale: on ? (mob() ? 1.15 : 1.25) : 1, zIndex: on ? 10 : 0, duration: 0.4, overwrite: 'auto' });
+      gsap.to(x, { opacity: c ? (on ? 1 : DIM) : 1, rotationY: on ? 0 : flipRotationY, scale: on ? (mob() ? 1.15 : 1.25) : 1, zIndex: on ? 10 : 0, duration: 0.4, overwrite: 'auto' });
       if (on) {
         const it = L.marquee.items[x.dataset.k] || {};
         [box, ov].forEach((el) => {
