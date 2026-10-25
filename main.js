@@ -42,14 +42,14 @@ function init() {
           <p class="absolute bottom-0 left-0 font-head text-[1.35rem] font-bold leading-none md:text-[clamp(2.2rem,4vw,3.6rem)]" style="color:${d.color}"><span data-i18n="ui.day"></span> ${i + 1}</p>
         </div>
         <div class="photo relative h-full w-full overflow-hidden rounded-xl" style="box-shadow:0 20px 100px 4px ${d.color}">
-          <img src="${d.media || d.img}" alt="" class="h-full w-full object-cover">
+          <img src="${d.media}" alt="" class="h-full w-full object-cover">
           <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.35) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 90%)"></div>
         </div>
         <div class="pols pointer-events-none absolute inset-x-0 -bottom-[7vh] flex justify-around px-2 md:px-[6vw]">
           ${d.pols.map((p, j) => `
             <figure class="pol group pointer-events-auto relative w-[27vw] bg-white p-2 pb-5 shadow-xl md:w-[max(13vw,150px)]" style="--r:${rot[j]}">
               <img src="${p}" alt="" class="aspect-square w-full object-cover">
-              <figcaption class="absolute inset-2 bottom-5 flex items-end overflow-hidden bg-black/65 p-2 text-[10px] leading-tight text-white opacity-0 transition-opacity group-hover:opacity-100 md:text-xs md:leading-snug"><p class="line-clamp-5 md:line-clamp-6 xl:line-clamp-7" data-i18n="days.${i}.pols.${j}"></p></figcaption>
+              <figcaption class="absolute inset-2 bottom-5 flex items-end overflow-hidden bg-black/65 p-2 text-white opacity-0 transition-opacity group-hover:opacity-100"><p class="w-full text-[11px] leading-tight line-clamp-5 sm:text-sm sm:leading-snug sm:line-clamp-6 2xl:text-base 2xl:line-clamp-7" data-i18n="days.${i}.pols.${j}"></p></figcaption>
             </figure>`).join('')}
         </div>
       </div>
