@@ -1,61 +1,235 @@
 {
   "shared": {
-    "heroVideo": "media/intro.mp4",
+    "heroVideo": "media/intro_soundless.mp4",
     "days": [
-      { "media": "media/Ta_Van.webp", "color": "#E3B21B", "pols": ["media/La_Pan_Tan(1).webp", "media/MuCangChai_Deo_O_Quy_Ho.webp", "media/Fansipan.webp"] },
-      { "media": "media/Fansipan.webp", "color": "#4F7FA8", "pols": ["media/Ta_Van.webp", "media/La_Pan_Tan(1).webp", "media/MuCangChai_Deo_O_Quy_Ho.webp"] },
-      { "media": "media/MuCangChai_Deo_O_Quy_Ho.webp", "color": "#6E93BD", "pols": ["media/Fansipan.webp", "media/Ta_Van.webp", "media/La_Pan_Tan(1).webp"] },
-      { "media": "media/La_Pan_Tan(1).webp", "color": "#8FAE2E", "pols": ["media/MuCangChai_Deo_O_Quy_Ho.webp", "media/Fansipan.webp", "media/Ta_Van.webp"] }
+      {
+        "media": "media/Ta_Van.webp",
+        "color": "#E3B21B",
+        "pols": [
+          "media/Sapa_Clover_Hotel.webp",
+          "media/Sapa_Nhuom_Cham.jpg",
+          "media/Sapa_Sailing_Sapa.png"
+        ]
+      },
+      {
+        "media": "media/Fansipan.webp",
+        "color": "#4F7FA8",
+        "pols": [
+          "media/Sapa_Mega_View_Homestay.jpg",
+          "media/Sapa_Ho_Mat_Ngoc.jpg",
+          "media/Sapa_Quang_Truong_Sapa.webp"
+        ]
+      },
+      {
+        "media": "media/MuCangChai_Deo_O_Quy_Ho.webp",
+        "color": "#6E93BD",
+        "pols": [
+          "media/Nha_San_Quan_Than_Uyen.webp",
+          "media/Mu_Cang_Chai_Big_View_Homestay.jpg",
+          "media/Doi_Mong_Ngua.webp"
+        ]
+      },
+      {
+        "media": "media/La_Pan_Tan(1).webp",
+        "color": "#8FAE2E",
+        "pols": [
+          "media/Doi_Mam_Xoi.jpg",
+          "media/Deo_Khau_Pha.jpg",
+          "media/Pho_Nui_Tu_Le.jpg"
+        ]
+      }
     ],
-    "marquee": ["media/Ta_Van.webp", "media/Fansipan.webp", "media/MuCangChai_Deo_O_Quy_Ho.webp", "media/La_Pan_Tan(1).webp", "media/Ta_Van.webp", "media/La_Pan_Tan(1).webp"]
+    "marquee": [
+      "media/Ta_Van.webp",
+      "media/Doi_Mam_Xoi.jpg",
+      "media/MuCangChai_Deo_O_Quy_Ho.webp",
+      "media/La_Pan_Tan(1).webp",
+      "media/Ta_Van.webp",
+      "media/La_Pan_Tan(1).webp"
+    ],
+    "plan": "media/plan.pdf"
   },
-  "en": {
-    "ui": { "name": "Around Viet Nam", "day": "Day", "footer": "One road to the North" },
+  "vi": {
+    "ui": {
+      "name": "Around Viet Nam",
+      "day": "Ngày",
+      "footer": "Hãy đón nhận vẻ đẹp của Việt Nam và để vùng Tây Bắc chiếm trọn trái tim bạn.",
+      "destinations": "Điểm đến nổi bật"
+    },
     "hero": {
-      "location": { "label": "Location", "value": "Northern Viet Nam" },
-      "duration": { "label": "Duration", "value": "4 days" },
-      "budget": { "label": "Budget", "value": "$0 - $000" }
+      "location": {
+        "label": "Địa điểm",
+        "value": "Tây Bắc Việt Nam"
+      },
+      "duration": {
+        "label": "Thời gian",
+        "value": "4 ngày 3 đêm"
+      },
+      "budget": {
+        "label": "Ngân sách",
+        "value": "9 672 882 VNĐ"
+      },
+      "plan": "Tải bảng kế hoạch"
     },
     "days": [
-      { "name": "Tả Van", "pols": ["Add a short description of this photo.", "Add a short description of this photo.", "Add a short description of this photo."] },
-      { "name": "Fansipan", "pols": ["Add a short description of this photo.", "Add a short description of this photo.", "Add a short description of this photo."] },
-      { "name": "Mù Cang Chải", "pols": ["Add a short description of this photo.", "Add a short description of this photo.", "Add a short description of this photo."] },
-      { "name": "La Pán Tẩn", "pols": ["Add a short description of this photo.", "Add a short description of this photo.", "Add a short description of this photo."] }
+      {
+        "name": "Tả Van",
+        "pols": [
+          "Khách sạn đạt tiêu chuẩn 3 sao, Sapa Clover, nằm ngay tại trung tâm thị trấn Sa Pa.",
+          "Trải nghiệm nhuộm chàm, hoà mình vào văn hoá Tây Bắc tại Chàm Workshop.",
+          "Sailing Sapa là một quán café kiêm nhà hàng với nhiều nơi để chụp những bức ảnh đẹp lung linh."
+        ]
+      },
+      {
+        "name": "Fansipan",
+        "pols": [
+          "Mega View Homestay nổi tiếng với view hướng thẳng ra thung lũng Mường Hoa và đỉnh Fansipan.",
+          "Hồ Mắt Ngọc là một điểm thu hút khác du lịch bởi vẻ đẹp tuyệt vời được thiên nhiên ban tặng.",
+          "Quảng trường Sapa là nơi diễn ra mọi hoạt động giao lưu văn hóa, mua bán, cũng như thường xuyên tổ chức các lễ hội vùng."
+        ]
+      },
+      {
+        "name": "Mù Cang Chải",
+        "pols": [
+          "Nhà Sàn Quán Than Uyên là một quán ăn nổi tiếng phục vụ ẩm thực Tây Bắc.",
+          "Mù Cảng Chai big view Homestay trọn thung lũng, núi non và các thửa ruộng bậc thang đặc trưng của Mù Cang Chải.",
+          "Đồi Móng Ngựa là một điểm đến không thể bỏ qua với khung cảnh xanh mướt và rộng lớn."
+        ]
+      },
+      {
+        "name": "La Pán Tẩn",
+        "pols": [
+          "Đồi mâm xôi nổi tiếng là một trong những địa điểm ngắm cánh đồng lúa chín vàng đẹp nhất miền bắc nước ta.",
+          "Khau Phạ theo tiếng của đồng bào Thái có nghĩa là “Sừng Trời” hoặc “Cổng Trời” do đỉnh đèo chọc trời và quanh năm mây mù bao phủ.",
+          "Nhà hàng Phố Núi phục vụ các đặc sản Tây Bắc."
+        ]
+      }
     ],
     "marquee": {
-      "title": "Moments from the road",
+      "title": "Khoảnh khắc đáng nhớ",
       "items": [
-        { "title": "Title 1", "text": "Add your text here." },
-        { "title": "Title 2", "text": "Add your text here." },
-        { "title": "Title 3", "text": "Add your text here." },
-        { "title": "Title 4", "text": "Add your text here." },
-        { "title": "Title 5", "text": "Add your text here." },
-        { "title": "Title 6", "text": "Add your text here." }
+        {
+          "username": "your_username1@facebook.com",
+          "location": "Tả Van",
+          "text": "Dán nội dung bài đăng vào đây."
+        },
+        {
+          "username": "your_username2@traveloka.com",
+          "location": "Đồi Mâm Xôi",
+          "text": "Dán nội dung bài đăng vào đây."
+        },
+        {
+          "username": "your_username3@tripadvisor.com",
+          "location": "Mù Cang Chải",
+          "text": "Dán nội dung bài đăng vào đây."
+        },
+        {
+          "username": "your_username4@instagram.com",
+          "location": "La Pán Tẩn",
+          "text": "Dán nội dung bài đăng vào đây."
+        },
+        {
+          "username": "your_username5@facebook.com",
+          "location": "Tả Van",
+          "text": "Dán nội dung bài đăng vào đây."
+        },
+        {
+          "username": "your_username6@traveloka.com",
+          "location": "La Pán Tẩn",
+          "text": "Dán nội dung bài đăng vào đây."
+        }
       ]
     }
   },
-  "vi": {
-    "ui": { "name": "Around Viet Nam", "day": "Ngày", "footer": "Một con đường lên phía Bắc" },
+  "en": {
+    "ui": {
+      "name": "Around Viet Nam",
+      "day": "Day",
+      "footer": "Embrace the beauty of Viet Nam and let the Northwest steal your heart.",
+      "destinations": "Featured destinations"
+    },
     "hero": {
-      "location": { "label": "Địa điểm", "value": "Miền Bắc Việt Nam" },
-      "duration": { "label": "Thời gian", "value": "4 ngày" },
-      "budget": { "label": "Ngân sách", "value": "0 - 000 USD" }
+      "location": {
+        "label": "Location",
+        "value": "Northwest Viet Nam"
+      },
+      "duration": {
+        "label": "Duration",
+        "value": "4 days 3 nights"
+      },
+      "budget": {
+        "label": "Budget",
+        "value": "$374.30"
+      },
+      "plan": "Download plan"
     },
     "days": [
-      { "name": "Tả Van", "pols": ["Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này."] },
-      { "name": "Fansipan", "pols": ["Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này."] },
-      { "name": "Mù Cang Chải", "pols": ["Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này."] },
-      { "name": "La Pán Tẩn", "pols": ["Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này.", "Thêm mô tả ngắn cho bức ảnh này."] }
+      {
+        "name": "Tả Van",
+        "pols": [
+          "Sapa Clover, a 3-star hotel right in the center of Sa Pa town.",
+          "Try indigo dyeing and immerse yourself in Northwest culture at Chàm Workshop.",
+          "Sailing Sapa is a café and restaurant with plenty of spots for beautiful photos."
+        ]
+      },
+      {
+        "name": "Fansipan",
+        "pols": [
+          "Mega View Homestay is known for its view straight onto the Mường Hoa Valley and Fansipan peak.",
+          "Hồ Mắt Ngọc (Jade Eye Lake) is a popular attraction, loved for its natural beauty.",
+          "Sa Pa Square hosts cultural exchange, trading and regular regional festivals."
+        ]
+      },
+      {
+        "name": "Mù Cang Chải",
+        "pols": [
+          "Nhà Sàn Quán Than Uyên is a popular stilt-house restaurant serving Northwest cuisine.",
+          "Mù Cang Chải Big View Homestay overlooks the whole valley, mountains and the area's signature terraced fields.",
+          "Horseshoe Hill (Đồi Móng Ngựa) is a must-see, with wide, lush green scenery."
+        ]
+      },
+      {
+        "name": "La Pán Tẩn",
+        "pols": [
+          "Mâm Xôi Hill is one of the best places in northern Viet Nam to see golden ripe rice fields.",
+          "In the Thai language, Khau Phạ means “Horn of the Sky” or “Gate of the Sky”, for its sky-piercing pass and year-round mist.",
+          "Phố Núi Restaurant serves Northwest specialties."
+        ]
+      }
     ],
     "marquee": {
-      "title": "Khoảnh khắc trên đường",
+      "title": "Memorable moments",
       "items": [
-        { "title": "Tiêu đề 1", "text": "Thêm nội dung của bạn ở đây." },
-        { "title": "Tiêu đề 2", "text": "Thêm nội dung của bạn ở đây." },
-        { "title": "Tiêu đề 3", "text": "Thêm nội dung của bạn ở đây." },
-        { "title": "Tiêu đề 4", "text": "Thêm nội dung của bạn ở đây." },
-        { "title": "Tiêu đề 5", "text": "Thêm nội dung của bạn ở đây." },
-        { "title": "Tiêu đề 6", "text": "Thêm nội dung của bạn ở đây." }
+        {
+          "username": "your_username1@facebook.com",
+          "location": "Tả Van",
+          "text": "Paste the post text here."
+        },
+        {
+          "username": "your_username2@traveloka.com",
+          "location": "Đồi Mâm Xôi",
+          "text": "Paste the post text here."
+        },
+        {
+          "username": "your_username3@tripadvisor.com",
+          "location": "Mù Cang Chải",
+          "text": "Paste the post text here."
+        },
+        {
+          "username": "your_username4@instagram.com",
+          "location": "La Pán Tẩn",
+          "text": "Paste the post text here."
+        },
+        {
+          "username": "your_username5@facebook.com",
+          "location": "Tả Van",
+          "text": "Paste the post text here."
+        },
+        {
+          "username": "your_username6@traveloka.com",
+          "location": "La Pán Tẩn",
+          "text": "Paste the post text here."
+        }
       ]
     }
   }
