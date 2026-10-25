@@ -13,7 +13,7 @@ function applyLang(l) {
   const b = document.getElementById('lang');
   b.innerHTML = l === 'en' ? '<b>EN</b> | <span class="opacity-60">VI</span>' : '<span class="opacity-60">EN</span> | <b>VI</b>';
   const plan = document.getElementById('plan');
-  const file = L.hero.planFile || DATA.shared.plan || '#';
+  const file = L.hero.planFile || DATA.shared.planFile || '#';
   plan.href = file;
   plan.setAttribute('download', file.split('/').pop());
 }
@@ -41,7 +41,7 @@ function init() {
           <p class="absolute bottom-0 left-0 font-head text-[1.35rem] font-bold leading-none md:text-[clamp(2.2rem,4vw,3.6rem)]" style="color:${d.color}"><span data-i18n="ui.day"></span> ${i + 1}</p>
         </div>
         <div class="photo relative h-full w-full overflow-hidden rounded-xl" style="box-shadow:0 20px 100px 4px ${d.color}">
-          <img src="${d.media}" alt="" class="h-full w-full object-cover">
+          <img src="${d.media || d.img}" alt="" class="h-full w-full object-cover">
           <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.35) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,0) 90%)"></div>
         </div>
         <div class="pols pointer-events-none absolute inset-x-0 -bottom-[7vh] flex justify-around px-2 md:px-[6vw]">
@@ -91,18 +91,24 @@ function init() {
   }
 
   /* ---------- marquee ---------- */
-  const track = document.getElementById('track'), M = S.marquee, BW = 260;
+  const track = document.getElementById('track'), M = S.marquee, BW = 380;
   const mob = () => matchMedia('(max-width: 767px)').matches;
-  track.innerHTML = [...M, ...M].map((src, i) =>
-    `<div class="mq relative w-[190px] shrink-0 cursor-pointer md:w-[280px]" data-k="${i % M.length}">
-      <div class="mqb absolute inset-y-0 left-0 z-0 hidden min-w-0 flex-col justify-center overflow-hidden rounded-lg bg-white p-5 opacity-0 shadow-2xl md:flex" style="width:${BW}px;visibility:hidden">
-        <h3 class="truncate font-head text-xl font-bold"></h3><p class="loc mt-0.5 truncate text-xs opacity-60"></p><p class="txt mt-2 line-clamp-6 text-sm"></p>
+  /* one card per item; if there are more items than images, the images repeat */
+  const count = Math.max(M.length, DATA.en.marquee.items.length, DATA.vi.marquee.items.length);
+  const imgs = Array.from({ length: count }, (_, k) => M[k % M.length]);
+  track.innerHTML = [...imgs, ...imgs].map((src, i) =>
+    `<div class="mq relative w-[190px] shrink-0 cursor-pointer md:w-[280px]" data-k="${i % count}">
+      <div class="mqb absolute left-0 top-1/2 z-0 hidden max-h-[min(540px,85vh)] min-w-0 flex-col overflow-y-auto overscroll-contain rounded-lg bg-white p-6 opacity-0 shadow-2xl [scrollbar-width:thin] md:flex" style="width:${BW}px;visibility:hidden">
+        <h3 class="truncate font-head text-xl font-bold"></h3><p class="loc mt-0.5 truncate text-xs opacity-60"></p><p class="txt mt-3 text-sm leading-relaxed"></p>
       </div>
       <img src="${src}" alt="" class="relative z-10 aspect-[3/4] w-full rounded-lg object-cover shadow-lg">
-      <div class="mqo absolute inset-0 z-20 flex min-w-0 flex-col justify-end overflow-hidden rounded-lg bg-black/65 p-4 text-white opacity-0 md:hidden" style="visibility:hidden">
-        <h3 class="truncate font-head text-base font-bold"></h3><p class="loc truncate text-[11px] opacity-70"></p><p class="txt mt-1 line-clamp-5 text-xs leading-snug"></p>
+      <div class="mqo absolute inset-0 z-20 flex min-w-0 flex-col overflow-y-auto overscroll-contain rounded-lg bg-black/65 p-4 text-white opacity-0 [scrollbar-width:thin] md:hidden" style="visibility:hidden">
+        <div class="mt-auto">
+          <h3 class="truncate font-head text-base font-bold"></h3><p class="loc truncate text-[11px] opacity-70"></p><p class="txt mt-1 text-xs leading-snug"></p>
+        </div>
       </div>
     </div>`).join('');
+  gsap.set('.mqb', { yPercent: -50 });
   const cards = gsap.utils.toArray('.mq');
   gsap.set(cards, { transformPerspective: 900, rotationY: 28 }); /* flip the sign to look the other way */
   const run = gsap.to(track, { xPercent: -50, duration: 45, ease: 'none', repeat: -1 });
@@ -118,14 +124,21 @@ function init() {
       gsap.to(x, { opacity: c ? (on ? 1 : DIM) : 1, rotationY: on ? 0 : 28, scale: on ? (mob() ? 1.15 : 1.25) : 1, zIndex: on ? 10 : 0, duration: 0.4, overwrite: 'auto' });
       if (on) {
         const it = L.marquee.items[x.dataset.k] || {};
-        [box, ov].forEach((el) => { el.querySelector('h3').textContent = it.username || ''; el.querySelector('.loc').textContent = it.location || ''; el.querySelector('.txt').textContent = it.text || ''; });
+        [box, ov].forEach((el) => {
+          el.querySelector('h3').textContent = it.username || '';
+          el.querySelector('.loc').textContent = it.location || '';
+          el.querySelector('.txt').textContent = it.text || '';
+          el.scrollTop = 0;
+        });
         if (mob()) {
           gsap.to(ov, { autoAlpha: 1, duration: 0.3, overwrite: true });
         } else {
           const r = x.getBoundingClientRect(), w = x.offsetWidth;
-          const right = r.left + r.width / 2 + (w * 1.25) / 2 + BW * 1.25 < innerWidth - 8;
+          const bw = Math.min(BW, Math.round(innerWidth * 0.36));
+          box.style.width = bw + 'px';
+          const right = r.left + r.width / 2 + (w * 1.25) / 2 + bw * 1.25 < innerWidth - 8;
           box.style.left = right ? '0' : 'auto'; box.style.right = right ? 'auto' : '0';
-          box.style.paddingLeft = right ? '34px' : '20px'; box.style.paddingRight = right ? '20px' : '34px';
+          box.style.paddingLeft = right ? '40px' : '24px'; box.style.paddingRight = right ? '24px' : '40px';
           gsap.fromTo(box, { x: 0, autoAlpha: 0 }, { x: (right ? 1 : -1) * (w - 12), autoAlpha: 1, duration: 0.5, ease: 'power3.out', overwrite: true });
         }
       } else if (x === prev) {

@@ -1,7 +1,7 @@
 {
   "shared": {
     "heroVideo": "media/intro_soundless.mp4",
-    "plan": "media/plan/lịch-trình-chi-tiết-DLTB.docx",
+    "planFile": "media/plan/lịch-trình-chi-tiết-DLTB.docx",
     "days": [
       {
         "media": "media/Ta_Van.webp",
@@ -41,12 +41,14 @@
       }
     ],
     "marquee": [
-      "media/Ta_Van.webp",
-      "media/Doi_Mam_Xoi.jpg",
-      "media/MuCangChai_Deo_O_Quy_Ho.webp",
-      "media/La_Pan_Tan(1).webp",
-      "media/Ta_Van.webp",
-      "media/La_Pan_Tan(1).webp"
+      "media/Orbille_Poil.webp",
+      "media/Meghna Gangul.webp",
+      "media/Tony_Lee.webp",
+      "media/Hang_Nguyen.webp",
+      "media/Michael_Someck.webp",
+      "media/Nam_Nguyen.webp",
+      "media/Saksham_Khanna.webp",
+      "media/MBrodders.webp"
     ]
   },
   "vi": {
@@ -110,34 +112,44 @@
       "title": "Khoảnh khắc đáng nhớ",
       "items": [
         {
-          "username": "your_username1@facebook.com",
-          "location": "Tả Van",
-          "text": "Dán nội dung bài đăng vào đây."
+          "username": "Orbille Piol",
+          "location": "Ga cáp treo Sun World Fansipan",
+          "text": "Chuyến đi Sa Pa sẽ không trọn vẹn nếu thiếu nơi này. Cáp treo và tàu hỏa leo núi là một trải nghiệm khó quên, với những khung cảnh ngoạn mục dọc đường đi. Lên đến đỉnh, phong cảnh đẹp đến nghẹt thở, thật sự không lời nào tả xuể và hoàn toàn xứng đáng với hành trình. Buffet có rất nhiều món Việt Nam chính gốc, cùng các lựa chọn riêng cho người thích thịt, người ăn chay, món Ấn Độ và món halal, phù hợp với nhiều khẩu vị và nhu cầu ăn uống. Đây chắc chắn là điểm đến không thể bỏ qua khi đến Sa Pa."
         },
         {
-          "username": "your_username2@traveloka.com",
-          "location": "Đồi Mâm Xôi",
-          "text": "Dán nội dung bài đăng vào đây."
+          "username": "Meghna Ganguly",
+          "location": "Ga cáp treo Sun World Fansipan",
+          "text": "Nơi rất đẹp, tuy nhiên chúng tôi hầu như không nhìn thấy gì vì sương mù. Nếu may mắn, bạn sẽ có tầm nhìn tuyệt đẹp khi trời không có sương. Quán Starbucks cao nhất châu Á nằm ngay tại đây."
         },
         {
-          "username": "your_username3@tripadvisor.com",
-          "location": "Mù Cang Chải",
-          "text": "Dán nội dung bài đăng vào đây."
+          "username": "Tony Lee",
+          "location": "Đèo Ô Quy Hồ",
+          "text": "Địa điểm tuyệt vời cho những ai thích phiêu lưu, đặc biệt là đi xe máy. Mình rất thích con đường và khung cảnh trên đỉnh đèo. Rất nên ghé xem cái cây cô đơn. Đi cẩn thận và chúc bạn vui vẻ!!!!!"
         },
         {
-          "username": "your_username4@instagram.com",
-          "location": "La Pán Tẩn",
-          "text": "Dán nội dung bài đăng vào đây."
+          "username": "Hang Nguyen - local guide",
+          "location": "Đèo Ô Quy Hồ",
+          "text": "Hoàng hôn thật đẹp sau cơn mưa!! Đúng là trong cái rủi có cái may. Chúng mình đến một điểm ngắm cảnh không quá đông, do một số bà con dân tộc thiểu số vận hành. Vào cổng chụp ảnh mất 20k/người. Họ còn phục vụ khoai lang nướng, trứng nướng và cơm, cùng một ít đồ uống. Cảnh đẹp choáng ngợp!! Thật sự đáng để đến ngắm đèo, dù đã khác rất nhiều so với lần mình đến cách đây gần 10 năm. Nhưng chắc chắn đáng để đi!!"
         },
         {
-          "username": "your_username5@facebook.com",
-          "location": "Tả Van",
-          "text": "Dán nội dung bài đăng vào đây."
+          "username": "Michael Someck",
+          "location": "Đèo Khau Phạ",
+          "text": "Mình đã xem không ít cảnh đẹp khi lái xe khắp Việt Nam, nên khi nói rằng mình há hốc mồm khi chạy qua con đèo này thì chắc chắn nó phải rất đặc biệt. Cách điểm đánh dấu trên Google khoảng 1km (nếu đi về hướng bắc) có một chỗ dừng chụp ảnh tuyệt vời. Nhớ dừng lại để ngắm cảnh đẹp này. Rất đáng."
         },
         {
-          "username": "your_username6@traveloka.com",
-          "location": "La Pán Tẩn",
-          "text": "Dán nội dung bài đăng vào đây."
+          "username": "Nam Nguyen",
+          "location": "Đèo Khau Phạ",
+          "text": "Đèo Khau Phạ – một trong “tứ đại đỉnh đèo” của Việt Nam, nơi mây ngủ giữa những thửa ruộng bậc thang, và mỗi khúc cua là một bức tranh rực rỡ của trời và đất."
+        },
+        {
+          "username": "Saksham Khanna",
+          "location": "Sailing Sapa",
+          "text": "Nằm giữa những cánh đồng lúa tuyệt đẹp ở Sa Pa, quán cà phê này như một viên ngọc ẩn mình. Đây không phải là nơi bạn tình cờ ghé qua—đồ ăn thật sự rất đặc biệt. Món nào cũng ấm áp, đậm vị, và được nấu bằng sự yêu thương, chu đáo như ở nhà. Điều khiến trải nghiệm thêm đáng nhớ là anh Thứ, người quản lý. Anh vô cùng thân thiện, chào đón và hào phóng, khiến bạn cảm thấy mình như một vị khách trong nhà thay vì một khách hàng. Nếu đến Sa Pa, đây là nơi bạn sẽ muốn quay lại nhiều lần."
+        },
+        {
+          "username": "M Brodders",
+          "location": "Sailing Sapa",
+          "text": "Một quán cà phê nhỏ tuyệt đẹp nhìn ra núi, ruộng lúa và dòng sông Sa Pa. Rất huyền diệu và dễ chịu, rất đáng thử. Món đậu phụ nấm ăn với cơm rất tuyệt."
         }
       ]
     }
@@ -203,34 +215,44 @@
       "title": "Memorable moments",
       "items": [
         {
-          "username": "your_username1@facebook.com",
-          "location": "Tả Van",
-          "text": "Paste the post text here."
+          "username": "Orbille Piol",
+          "location": "Cable Car Station - Sun World Fansipan",
+          "text": "A trip to Sapa is never complete without visiting this place. The cable car and mountain train rides are an unforgettable experience, offering spectacular views along the way. Once you reach the top, the scenery is simply breathtaking—truly beyond words and well worth the journey. The buffet offers a wide variety of authentic Vietnamese dishes, along with dedicated options for meat lovers, vegetarians, Indian cuisine, and halal meals, making it suitable for a range of tastes and dietary preferences. This is definitely a must-visit destination when you're in Sapa."
         },
         {
-          "username": "your_username2@traveloka.com",
-          "location": "Đồi Mâm Xôi",
-          "text": "Paste the post text here."
+          "username": "Meghna Ganguly",
+          "location": "Cable Car Station - Sun World Fansipan",
+          "text": "Beautiful place, although we couldn’t really see much because of fog. If you’re lucky you can have great views without the fog. Asia’s highest Starbucks is located here."
         },
         {
-          "username": "your_username3@tripadvisor.com",
-          "location": "Mù Cang Chải",
-          "text": "Paste the post text here."
+          "username": "Tony Lee",
+          "location": "Ô Quy Hồ pass",
+          "text": "Great place for adventure, the best for motobike adventure. Love the way and view on the top. High recommended to see lonely tree. Be safe and fun!!!!!"
         },
         {
-          "username": "your_username4@instagram.com",
-          "location": "La Pán Tẩn",
-          "text": "Paste the post text here."
+          "username": "Hang Nguyen - local guide",
+          "location": "Ô Quy Hồ pass",
+          "text": "Beautiful sunset after the rain!! It’s such a blessing in disguise We came to the not too crowded viewpoint operated by some ethinic minority people. It cost 20k/ person to come inside and take photos. They also provided grilled sweet potatoes, grilled eggs and rice, some drinks too. The view is stunning!! Really worth it to go and see the pass even though it’s a lot different from when I came nearly 10 years ago! But definitely worth the ride!!"
         },
         {
-          "username": "your_username5@facebook.com",
-          "location": "Tả Van",
-          "text": "Paste the post text here."
+          "username": "Michael Someck",
+          "location": "Khau Phạ pass",
+          "text": "I’ve seen my fair share of stunning scenery while driving through Vietnam, so it should say something when I say that my jaw dropped while driving this pass. There’s a spot maybe 1km beyond the pin in google (if heading north) that has an incredible spot to stop for photos. Make sure to stop and take in the incredible view. It’s worth it."
         },
         {
-          "username": "your_username6@traveloka.com",
-          "location": "La Pán Tẩn",
-          "text": "Paste the post text here."
+          "username": "Nam Nguyen",
+          "location": "Khau Phạ pass",
+          "text": "Khau Pha Pass – one of Vietnam's 'four great mountain passes', where clouds sleep amidst terraced rice fields, and every bend in the road is a vibrant painting of the sky and earth."
+        },
+        {
+          "username": "Saksham Khanna",
+          "location": "Sailing Sapa",
+          "text": "Nestled in the middle of stunning rice fields in Sa Pa, this cafe feels like a hidden gem. It’s not just another spot you stumble upon here—the food is truly special. Every dish is comforting, full of flavor, and feels like it’s been made with the same love and care you’d find at home. What makes the experience even more memorable is Thứ, the manager. He is incredibly warm, welcoming, and generous, making you feel less like a customer and more like a guest in his home. If you’re in Sa Pa, this is a place you’d want to return to again and again."
+        },
+        {
+          "username": "M Brodders",
+          "location": "Sailing Sapa",
+          "text": "Absolutely beautiful little cafe overlooking the Sapa mountains and rice fields and river. Very magical and pretty settling, highly recommend. The tofu and mushroom with rice was excellent."
         }
       ]
     }
