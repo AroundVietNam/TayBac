@@ -1,7 +1,7 @@
 {
   "shared": {
     "heroVideo": "media/intro_soundless.mp4",
-    "planFile": "media/plan/lịch-trình-chi-tiết-DLTB.docx",
+    "planFile": "media/plan/English-Detailed-itinerary.docx",
     "days": [
       {
         "media": "media/Ta_Van.webp",
@@ -72,8 +72,8 @@
         "label": "Ngân sách",
         "value": "9 672 882 VNĐ"
       },
-      "plan": "Tải bảng kế hoạch",
-      "planFile": "media/plan/lịch-trình-chi-tiết-DLTB.docx"
+      "plan": "Tải bảng lịch trình",
+      "planFile": "media/plan/Tiếng-Việt-LỊCH-TRÌNH-CHI-TIẾT.docx"
     },
     "days": [
       {
@@ -174,10 +174,10 @@
       },
       "budget": {
         "label": "Budget",
-        "value": "$374.30"
+        "value": "$377.30"
       },
-      "plan": "Download plan",
-      "planFile": "media/plan/lịch-trình-chi-tiết-DLTB.docx"
+      "plan": "Download the itinerary",
+      "planFile": "media/plan/English-Detailed-itinerary.docx"
     },
     "days": [
       {
@@ -193,7 +193,7 @@
         "pols": [
           "Mega View Homestay is known for its view straight onto the Mường Hoa Valley and Fansipan peak.",
           "Hồ Mắt Ngọc (Jade Eye Lake) is a popular attraction, loved for its natural beauty.",
-          "Sa Pa Square hosts cultural exchange, trading and regular regional festivals."
+          "The Central Sapa Cluster, also known as The romantic heart in the misty town."
         ]
       },
       {
